@@ -17,7 +17,7 @@ ufw deny 111
 ufw deny 102
 
 #antivirus
-apt-get install -y clamav
+apt-get -y install clamav
 freshclam
 clamscan
 apt-get -y autoremove
@@ -51,3 +51,7 @@ passwd -l root
 
 #audit
 apt-get -y install auditd
+
+#updating FIREFOX
+add-apt-repository -y ppa:ubuntu-mozilla-security/ppa
+apt-get -y install firefox
